@@ -8,4 +8,6 @@ module type S = sig
 
   val of_bigdecimal : Bigdecimal.t -> t
   val to_bigdecimal : t -> Bigdecimal.t
+
+  include Core.Stringable.S with type t := t
 end
