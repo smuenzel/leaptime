@@ -19,7 +19,7 @@
  (name leaptime)
  (synopsis "A short synopsis")
  (description "A longer description")
- (depends ocaml)
+ (depends ocaml ppx_jane core_kernel)
  (tags
   ("add topics" "to describe" your project)))
 
