@@ -1,7 +1,6 @@
 (library
-  (name leaptime_generator)
-  (libraries core_kernel bigdecimal angstrom)
-  (preprocess (pps ppx_jane))
-  (inline_tests)
-  )
-
+ (name leaptime_generator)
+ (libraries core_kernel bigdecimal angstrom)
+ (preprocess
+  (pps ppx_jane))
+ (inline_tests))

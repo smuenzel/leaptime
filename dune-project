@@ -1,4 +1,5 @@
 (lang dune 3.18)
+(using cinaps 1.3)
 
 (name leaptime)
 

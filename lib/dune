@@ -2,5 +2,11 @@
  (public_name leaptime)
  (name leaptime)
  (libraries core_kernel bigdecimal)
- (preprocess (pps ppx_jane))
- )
+ (inline_tests)
+ (preprocess
+  (pps ppx_jane)))
+
+(cinaps
+ (files leap_second_info.ml)
+ (libraries core_kernel bigdecimal leaptime_generator)
+ (runtime_deps ../reference/Leap_Second.dat))

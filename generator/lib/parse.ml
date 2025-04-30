@@ -146,7 +146,7 @@ module File = struct
   end
 
   let parse =
-    let+ lines =
+    let* lines =
       sep_by1
         (char '\n')
         (choice
@@ -155,5 +155,6 @@ module File = struct
            ; (Line.parse >>| fun x -> Some (Element.Line x))
            ])
     in
+    let+ _ = char '\n' in
     List.filter_opt lines
 end
